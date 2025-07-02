@@ -4,43 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Merci – Facteo</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .merci-container {
-      max-width: 600px;
-      margin: 0 auto;
+    :root {
+      --bleu-clair: #007ACC;
+      --bleu-fonce: #004A80;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, var(--bleu-fonce), #1a1f29);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
       padding: 2rem;
-      color: white;
     }
-    .merci-container h1 {
-      font-size: 2.5rem;
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
-    .merci-container p {
-      font-size: 1.2rem;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.95;
       margin-bottom: 2rem;
     }
-    .instagram-btn {
-      background-color: #fff;
+
+    .btn-instagram {
+      background-color: white;
       color: #E1306C;
-      border: none;
+      font-weight: 600;
+      font-size: 1rem;
       padding: 0.8rem 1.5rem;
+      border: none;
       border-radius: 8px;
-      font-weight: bold;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
     }
-    .instagram-btn:hover {
-      background-color: #f0f0f0;
+
+    .btn-instagram:hover {
+      background-color: #f7f7f7;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="merci-container">
+  <div class="container">
     <h1>🎉 Merci pour votre inscription !</h1>
-    <p>Nous avons bien reçu votre adresse e-mail.<br>Vous serez informé du lancement de Facteo 🚀</p>
-    <a href="https://www.instagram.com/facteo.be/" target="_blank" class="instagram-btn">Suivez-nous sur Instagram</a>
+    <p>Votre adresse e-mail a bien été enregistrée.<br>Vous serez informé dès que <strong>Facteo</strong> sera lancé 🚀</p>
+    <a href="https://www.instagram.com/facteo.be/" target="_blank" class="btn-instagram">
+      🔗 Suivez-nous sur Instagram
+    </a>
   </div>
 </body>
 </html>

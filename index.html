@@ -4,42 +4,177 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Facteo – Bientôt disponible</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bleu-clair: #007ACC;
+      --bleu-fonce: #004A80;
+      --text-blanc: #ffffff;
+      --gris-clair: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, var(--bleu-fonce), #1a1f29);
+      color: var(--text-blanc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .prix {
+      margin: 0.5rem auto 1.5rem;
+      display: inline-block;
+      background: white;
+      color: var(--bleu-fonce);
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.95;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    ul.features {
+      text-align: left;
+      margin: 0 auto 2rem;
+      max-width: 400px;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.features li {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      position: relative;
+      padding-left: 1.4rem;
+    }
+
+    ul.features li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: var(--bleu-clair);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    input[type="email"] {
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    button {
+      background-color: var(--bleu-clair);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--bleu-fonce);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer a {
+      color: var(--bleu-clair);
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .container {
+        padding: 2rem;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>🚀 Facteo arrive bientôt</h1>
+    <img src="logo-facteo.jpeg" alt="Logo Facteo" class="logo" />
+    <h1>Facteo arrive bientôt</h1>
+    <div class="prix">Abonnement dès 9€/mois</div>
 
-    <!-- Nouveau texte marketing -->
     <p class="subtitle">
-      🛠️ Le chantier a commencé…<br />
-      Bientôt en ligne : Facteo, le service de facturation digitale pensé pour les indépendants en Belgique 🇧🇪
-      <br /><br />
-      ✔️ Envoi de factures au format Peppol<br />
-      ✔️ Création automatisée + conformité légale<br />
-      ✔️ Archivage PDF + tableau de suivi<br />
-      ✔️ Et plus encore…<br /><br />
-      🎯 Objectif : vous faire gagner du temps et simplifier la paperasse.<br />
-      🔗 Site en construction, mais on vous embarque dans l’aventure !
+      Le service de facturation électronique pensé pour les indépendants, TPE & PME 🇧🇪
     </p>
 
-    <!-- Formulaire email -->
-    <form action="https://formsubmit.co/facteo.contact@gmail.com" method="POST" style="margin-top: 20px;">
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Votre adresse e-mail" 
-        required 
-        style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; width: 250px;"
-      >
-      <input type="hidden" name="_subject" value="Nouvelle demande via Facteo">
+    <ul class="features">
+      <li>Envoi de factures au format Peppol</li>
+      <li>Création automatisée & conformité légale</li>
+      <li>Archivage PDF + tableau de suivi</li>
+      <li>Service 100% belge, simple & efficace</li>
+    </ul>
+
+    <form action="https://formsubmit.co/facteo.contact@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+      <input type="hidden" name="_subject" value="Nouvelle inscription à Facteo">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://facteo.be/merci.html">
-      <button type="submit" class="btn" style="margin-left: 10px;">Je suis intéressé</button>
+      <button type="submit">Je suis intéressé(e)</button>
     </form>
 
-    <p class="info">Site en construction – restez connectés !</p>
+    <div class="footer">
+      Suivez-nous sur <a href="https://www.instagram.com/facteo.be/" target="_blank">Instagram</a>
+    </div>
   </div>
 </body>
 </html>
-
